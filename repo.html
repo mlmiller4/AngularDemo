@@ -1,0 +1,17 @@
+<h2>{{repo.name}}</h2>
+
+<div>
+  Issues: {{repo.open_issues_count}}
+</div>
+
+<div>
+  <ul>
+    <li ng-repeat="gazer in repo.stargazers">
+      <img ng-src="{{gazer.avatar_url}}" title="{{gazer.login}}">
+      {{ gazer.login }}
+    </li>
+  </ul>
+</div>
+
+<a href="#/main">Back to Search</a>
+<a href="#/user/{{repo.owner.login}}">Back to {{repo.owner.login}}</a>
