@@ -1,7 +1,9 @@
 (function(){
   
+    // Get githubViewer module with ngRoute dependancy
     var app = angular.module("githubViewer", ["ngRoute"]);
     
+    // Configure routes for "main", "/user/username", and "/repos/username/reponame"
     app.config(function($routeProvider){
       $routeProvider
           .when("/main", {

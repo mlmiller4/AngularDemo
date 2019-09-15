@@ -10,7 +10,7 @@
       github.getRepos($scope.user).then(onRepos, onError);
     };
     
-    // After getting repos, scroll page down to userdetails.html section
+    // Add list of a user's repos to $scope.repos
     var onRepos = function(data){
       $scope.repos = data;
     };
@@ -22,6 +22,8 @@
 
     $scope.username = $routeParams.username        // Default username
     $scope.repoSortOrder = "-stargazers_count";   // Default sorting: descending by number of stars
+    
+    // Get user info by username
     github.getUser($scope.username).then(onUserComplete, onError);
   };
 
